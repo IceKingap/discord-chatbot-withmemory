@@ -28,7 +28,7 @@ intents = discord.Intents.default()
 intents.message_content = True
 bot = commands.Bot(command_prefix="!", intents=intents)
 
-# ── ❺ 自動送信タスク (1 分ごと) ───────────────────
+# ── ❺ 自動送信タスク (10 時間ごと) ───────────────────
 channel_id = int(os.getenv("CHANNEL_ID", 0))
 
 @tasks.loop(hours=10)
